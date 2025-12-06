@@ -38,6 +38,24 @@ char	*ft_strchr(const char *s, int c)
 	return (NULL);
 }
 
+char *ft_substr(char const *s, int start, int end)
+{
+	int i;
+	char *str;
+
+	i = 0;
+	str = malloc(end - start + 1);
+	if (!str)
+		return NULL;
+	while (i <= end)
+	{
+		str[i] = s[i];
+		i++;
+	}
+	str[i] = '\0';
+	return str;
+}
+
 char	*ft_strjoin(char *s1, char *s2)
 {
 	char	*str;

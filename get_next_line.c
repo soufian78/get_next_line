@@ -85,10 +85,7 @@ char	*update_line(char *stash)
 	i++;
 	new_line = malloc(ft_strlen(stash + i) + 1);
 	if (!new_line)
-	{
-		free(stash);
-		return (NULL);
-	}
+		return (free(stash),NULL);
 	while (stash[i])
 		new_line[j++] = stash[i++];
 	new_line[j] = '\0';
